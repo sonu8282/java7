@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <input type="text" name="" id="city" class="form-control ">
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <h1 id="city_name"></h1>
+            </div>
+        </div>
+        <div class="row" id="result">
+            
+        </div>
+    </div>
+     <script>
+        $(function(){
+            $("#city").keyup(function(){
+                var ct = $(this).val();   
+                $.ajax({
+                    url:"http://api.openweathermap.org/data/2.5/forecast?q="+ct+"&appid=e79a7d07c4e3bf54dd170836c3e88496",
+                    type:"get",
+                    success:function(abcd){
+                         // The 0 there is the key, which sets the date to the epoch
+                        $("#city_name").html(abcd.city.name+" ("+abcd.city.country+")");
+
+                        var result = "";
+                        for(i in abcd.list){
+
+                            
+
+                            result+="<div class='col-md-3 text-center m-2 mx-auto' style='box-shadow: 0px 0px 10px gray;'>";
+                           
+                            result+="<div><img src='http://openweathermap.org/img/wn/"+abcd.list[i].weather[0].icon+"@2x.png'></div>";
+                            result+="<p>Temp: "+abcd.list[i].wind.deg+"&deg;C</p>";
+
+                            result+="<p>"+abcd.list[i].weather[0].main+"</p>";
+
+                            result+="<em>"+abcd.list[i].weather[0].description+"</em>";
+
+                            result+="<p>"+abcd.list[i].dt_txt+"</p>";
+
+                            result+="</div>";
+                            
+                         }
+                          $("#result").html(result);
+
+                   
+                       }
+                    })
+               });
+
+          });
+    </script>
+</body>
+</html>

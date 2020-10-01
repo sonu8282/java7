@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <style type="text/css">
+       #count{
+        height: 100px;width: 100px;text-align: center;line-height: 100px;margin:auto;
+        background:red;color: white;border-radius: 50%;margin-top: 30px;
+       }
+
+       .bt1{
+        margin-left: 600px;
+       }
+    </style>
+	
+</head>
+<body  style="margin-top: 200px;">
+    <button onclick="start()" class="bt1">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Restart</button>
+    <h1 id="count"></h1>
+
+    <script type="text/javascript">
+        var c=0;
+        var d=0;
+        function counter()
+        {
+           document.getElementById("count").innerHTML=d+":"+c;
+           c++;
+           if(c==60)
+           {
+            c=0
+            d=d+1
+           }
+        }
+
+        function start()
+        {
+            ab=setInterval(counter,1000);
+        }
+
+         function stop()
+        {
+           clearInterval(ab);
+        }
+
+         function reset()
+        {   
+            c=0;
+            document.getElementById("count").innerHTML=d+":"+c;
+        }
+    </script>
+	
+</body>
+</html>

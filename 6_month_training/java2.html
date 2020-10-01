@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <input type="text" name="" id="input" placeholder="Enter Number" onkeyup="myfun()">
+    <div id="demo"></div>
+
+    <script type="text/javascript">
+         
+         function myfun() {
+    		
+        var a=document.getElementById("input").value;
+    	var rs="";
+        document.write("First Pattern")
+        document.write("<br>")
+        document.write("<br>")
+    	for(var i=1;i<=a;i++)
+    	{
+    		for(var j=1;j<=i;j++)
+    		{
+
+    			document.getElementById("input").innerHTML="* ";
+    		}
+
+    		document.write("<br>")
+    	}
+    
+
+       document.write("<br>")
+       document.write("Second Pattern")
+       document.write("<br>")
+       document.write("<br>")
+       for(var i=a;i>=1;i--)
+    	{
+    		for(var j=1;j<=i;j++)
+    		{
+    			document.getElementById("demo").innerHTML="* ";
+    		}
+
+    		document.write("<br>")
+    	}
+
+    }
+    
+
+    </script>
+</body>
+</html>

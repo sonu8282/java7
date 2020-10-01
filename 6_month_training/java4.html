@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" name="" id="input1" placeholder="Enter Password" class="form-control mt-1" onkeyup="result()">
+    <input type="text" name="" id="input2" placeholder="Enter Confirm Password" class="form-control mt-3" onkeyup="result()">
+    <div id="hi"></div>
+
+    <script type="text/javascript">
+    	function result()
+    	{
+    		var a=document.getElementById("input1").value;
+    		var b=document.getElementById("input2").value;
+
+    		if(a==b)
+    		{
+    			document.getElementById("input1").style.borderColor="green";
+    			document.getElementById("input2").style.borderColor="green";
+    		}
+    		else
+    		{
+               document.getElementById("input1").style.borderColor="red";
+    		   document.getElementById("input2").style.borderColor="red";
+    		}
+    	}
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<input type="text" name="" class="form-control" style="width: 500px;display: inline-block;" id="input">
+	<button class="btn btn-success" style="width: 500px;display: inline-block;" onclick="myfun()">ADD</button>
+
+	<table class="table table-striped" style="margin-top: 40px">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Example</th>
+      <
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="tr">
+      <th scope="row" id="h1"></th>
+      <th id="h2"></th>
+      <th id="h3"></th>
+     
+    </tr>
+   
+  </tbody>
+</table>
+
+<script type="text/javascript">
+	
+	
+	
+	rs="";
+
+	
+	function myfun()
+
+	{    
+
+		var d=document.getElementById("input").value;
+	    var c=1;
+	     
+
+        document.getElementById("h2").innerHTML=d;
+		document.getElementById('h1').innerHTML=c;
+		document.getElementById('h3').style.background=d;
+		
+
+
+		 
+		 
+	}
+
+
+
+</script>
+    
+    
+</body>
+</html>

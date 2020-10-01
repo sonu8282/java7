@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+    	#input{
+    		height: 70px;
+    		width: 35%;
+    		border:1px solid black;
+    		
+    		font-size: 30px;
+    	}
+
+    	.abcd{
+    		padding: 3px 40px;
+    		border:none;
+    		outline:none;
+    		border-radius: 6px;
+    	}
+
+    	.abcd:hover{
+    		background-color: cyan;
+    	}
+
+    	.div{
+    		display: inline-block;
+
+    	}
+    	.con{
+    		margin-left: 422px;
+    	}
+
+
+    </style>
+
+</head>
+<body>
+	<center>
+    <input type="text" name="" id="input" class="form-control mt-5" value="0">
+    </center>
+
+    <div class="container mt-3 con">
+    	<div class="row div mx-auto">
+    		<div class="col-md-3  div">
+    			<button class="abcd"  id="v7">7</button>
+    		</div>
+    		<div class="col-md-3 div">
+    			<button class="abcd" id="v8">8</button>
+    		</div>
+    		<div class="col-md-3  div">
+    			<button class="abcd" id="v9">9</button>
+    		</div>
+    		<div class="col-md-2  div">
+    			<button class="abcd" id="vdivide">/</button>
+    		</div>
+
+
+    	</div><br><br>
+    	<div class="row div mx-auto">
+    		<div class="col-md-3  div">
+    			<button class="abcd" id="v4">4</button>
+    		</div>
+    		<div class="col-md-3 div">
+    			<button class="abcd" id="v5">5</button>
+    		</div>
+    		<div class="col-md-3  div">
+    			<button class="abcd" id="v6">6</button>
+    		</div>
+    		<div class="col-md-2  div">
+    			<button class="abcd" id="vmultiply">*</button>
+    		</div>
+
+
+    	</div><br><br>
+
+    	<div class="row div mx-auto">
+    		<div class="col-md-3  div">
+    			<button class="abcd" id="v1">1</button>
+    		</div>
+    		<div class="col-md-3 div">
+    			<button class="abcd" id="v2">2</button>
+    		</div>
+    		<div class="col-md-3  div">
+    			<button class="abcd" id="v3">3</button>
+    		</div>
+    		<div class="col-md-2  div">
+    			<button class="abcd" id="vminus">-</button>
+    		</div>
+
+
+    	</div><br><br>
+
+    	<div class="row div mx-auto">
+    		<div class="col-md-3  div">
+    			<button class="abcd" id="v0">0</button>
+    		</div>
+    		<div class="col-md-3 div">
+    			<button class="abcd" id="vac">ac</button>
+    		</div>
+    		<div class="col-md-3  div">
+    			<button class="abcd" style="background-color: blue;color: white" id="vresult">=</button>
+    		</div>
+    		<div class="col-md-2  div">
+    			<button class="abcd" id="vpluse">+</button>
+    		</div>
+
+
+    	</div>
+    </div>
+
+
+    <script type="text/javascript">
+         $(function(){
+         	var s="";
+            $("#v7").click(function(){
+            	s+=7;
+            	$("#input").val(s);
+            });
+
+            $("#v8").click(function(){
+            	s+=8;
+            	$("#input").val(s);
+            });
+            $("#v9").click(function(){
+            	s+=9;
+            	$("#input").val(s);
+            });
+
+            $("#vdivide").click(function(){
+            	s+="/";
+            	$("#input").val(s);
+            });
+            $("#v4").click(function(){
+            	s+=4;
+            	$("#input").val(s);
+            });
+
+            $("#v5").click(function(){
+            	s+=5;
+            	$("#input").val(s);
+            });
+            $("#v6").click(function(){
+            	s+=6;
+            	$("#input").val(s);
+            });
+
+            $("#vmultiply").click(function(){
+            	s+="*";
+            	$("#input").val(s);
+            });
+
+            $("#v1").click(function(){
+            	s+=1;
+            	$("#input").val(s);
+            });
+            $("#v2").click(function(){
+            	s+=2;
+            	$("#input").val(s);
+            });
+
+            $("#v3").click(function(){
+            	s+=3;
+            	$("#input").val(s);
+            });
+            $("#vminus").click(function(){
+            	s+="-";
+            	$("#input").val(s);
+            });
+
+             $("#v0").click(function(){
+            	s+=0;
+            	$("#input").val(s);
+            });
+
+        
+            $("#vresult").click(function(){
+               
+                $("#input").val(eval(s));  
+            	
+            });
+
+            $("#vpluse").click(function(){
+            	s+="+";
+            	$("#input").val(s);
+            	
+            });
+
+             $("#vac").click(function(){
+            	ac=0;
+            	$("#input").val(ac);
+            	s="";
+            	
+            });
+         });
+
+
+    </script>
+</body>
+</html>
